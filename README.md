@@ -71,25 +71,33 @@ Designed natively for modern macOS and Apple Silicon using Swift, SwiftUI, and M
 
 ## Building & Running
 
-### Option A: Launch Pre-Built App Bundle
-The release app bundle is located at:
+### Option A: Build and Run
+Clone the repository and build the native app bundle:
 ```bash
-open "/Users/genesis/Wallpaper/Art Wallpapers.app"
+# Clone the repository
+git clone https://github.com/Genesis-Z-R/art-wallpapers.git
+cd art-wallpapers
+
+# Build the release app bundle
+./scripts/build_app.sh
+
+# Launch the app directly
+open "Art Wallpapers.app"
 ```
 
-To install into your Applications folder:
+To install into your macOS Applications folder:
 ```bash
-cp -R "/Users/genesis/Wallpaper/Art Wallpapers.app" /Applications/
+cp -R "Art Wallpapers.app" /Applications/
 open "/Applications/Art Wallpapers.app"
 ```
 
-### Option B: Build from Source
+### Option B: Development & Testing
 ```bash
-# Build the release bundle:
-./scripts/build_app.sh
-
-# Or run the verification suite:
+# Run the verification test suite:
 swift scripts/run_verification.swift
+
+# Run Swift Package Manager tests:
+swift test
 ```
 
 ---
